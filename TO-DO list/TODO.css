@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Popins', sans-serif;
+    box-sizing: border-box;
+}
+.app-container{
+    background-image: linear-gradient(to right, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    /*
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+
+.app{
+    width: 100%;
+    max-width: 540px;
+    background: #121111;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 30px;
+}
+.app .tittle-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.app .tittle-menu h4{
+    color: #f7f4f4;
+}
+.tittle-menu img{
+    width: 30px;
+}
+.tittle-menu img:hover{
+    cursor: pointer;
+}
+.app .todo-done{
+    border: 2px solid #c3c1c1;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 20px;
+}
+.todo-done .paragraph{
+    color: #a8a8a8;
+}
+.todo-done .paragraph h2{
+    color: #c0c0c0;
+}
+.todo-done .todo-count{
+    font-weight: bold;
+    font-size: 30px;
+    background: rgb(255, 106, 0);
+    border-radius: 50%;
+    padding: 30px 29px;
+}
+.app .inRow{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.inRow input{
+    background: #242020;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: left;
+    color: white;
+    width: 300px;
+}
+.inRow button{
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 15px;
+    margin-left: 10px;
+    background: rgb(255, 106, 0);
+}
+.inRow button:hover{
+    cursor: pointer;
+}
+.task-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+.task-container > *{
+    background: #242020;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    border: 2px solid #c3c1c1;
+    padding: 10px 40px;
+    margin: 10px;
+    position: relative;
+    width: 350px;
+}
+.task-container div span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.task-container div span img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.task-container div::before{
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url('dry-clean.png');
+    background-size: contain; /* Resizes image to fit */
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 12px;
+}
+
+.task-container div.check{
+    text-decoration: line-through;
+    color: #555;
+}
+
+
+.task-container div.check::before{
+    background-image: url('check.png');
+}
